@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Good Quality Shoes Products</h3>
+
+<div class="row">
+    {% for shoes in shoes %}
+    <div class="col">
+
+        <div class="card" style="width: 18rem;">
+            <img src="{{shoes.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{shoes.name}}</h5>
+              <p class="card-text">${{shoes.price}}</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+
+
+  </div>
+  {% endfor %}
+{% endblock %}
